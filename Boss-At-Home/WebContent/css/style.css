@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/********************************* LOGO *******************************/
+.logo h1 {
+  font-family: "Baumans", cursive;
+}
+.logo h1 span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+#fon {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+.logo {
+  font-size: 1.2rem;
+  transition: 0.8s ease-in-out;
+}
+.logo a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: 0.8s ease-in-out;
+}
+
+/************************* NAVIGATION BAR **********************************/
+main nav {
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  align-items: center;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+#account-img a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: "Baumans", sans-serif;
+  transition: 0.8s ease-in-out;
+}
+#account-img {
+  display: flex;
+}
+
+.nav-links li img {
+  width: 1.2rem;
+  filter: invert(100%);
+  transition: 0.8s ease-in-out;
+}
+.nav-slider {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 4rem;
+  z-index: -1;
+}
+/************************************* NAVIGATION MENU *************************************/
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: whitesmoke;
+  transform: translateX(100vw);
+}
+
+.overlay ul {
+  position: relative;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+  height: 100vh;
+}
+#menu:hover {
+  transition: 0.3s ease-in-out;
+  color: rgb(166, 169, 173);
+}
+
+.overlay ul li {
+  height: 7%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.overlay li a {
+  position: relative;
+  top: 0%;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  display: block;
+  text-align: left;
+  padding: 0 15%;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: "Darker Grotesque", sans-serif;
+  transform: translateY(100%);
+}
+
+/************************************* HAMBURGER *************************************/
+.menu-bars {
+  z-index: 10;
+  display: inline;
+  cursor: pointer;
+}
+.bar2 {
+  width: 12px;
+  height: 2px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.8s ease-in-out;
+}
+.bar1,
+.bar3 {
+  width: 19px;
+  height: 2px;
+  background-color: white;
+  transition: 0.8s ease-in-out;
+  border-radius: 10px;
+}
+
+/************************************* TOGGLE HAMBURGER ****************************/
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 3px);
+  transform: rotate(-45deg) translate(-6px, 3px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-4px, -4px);
+  transform: rotate(45deg) translate(-5px, -3px);
+}
+
+/************************************************* SEARCH BAR *************************************************/
+.search-overlay {
+  position: fixed;
+  height: 30vh;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  transform: translateY(-100%);
+}
+
+.search-overlay .search-input {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 90%;
+}
+.search-input input {
+  width: 100%;
+  padding: 1.5rem;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 0.5px solid rgb(206, 202, 202);
+  transition: 0.5s ease-in-out;
+}
+.search-input input:focus {
+  /* background-color: tomato; */
+  transform-origin: center;
+  border-bottom: 1px solid rgb(27, 27, 27);
+  transition: 0.5s ease-in-out;
+}
+.search-overlay span {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+}
+.search-overlay span img {
+  width: 1.5rem;
+  cursor: pointer;
+}
+/****************************** LANDING CONTAINER ******************************/
+.landing-container {
+  z-index: 8;
+  overflow: hidden;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  color: rgb(220, 233, 228);
+  font-family: "Darker Grotesque", sans-serif;
+  transition: 0.8s ease-in-out;
+}
+
+.landing-intro {
+  overflow: hidden;
+}
+
+.landing-intro .landing-text {
+  font-size: 6rem;
+  letter-spacing: 2px;
+  display: inline-block;
+  transform: translateY(100%);
+  margin: -3% 0;
+}
+.caption {
+  overflow: hidden;
+  margin-top: 3%;
+}
+.caption .landing-text {
+  font-size: 1.6rem;
+  display: inline-block;
+  transform: translateY(100%);
+}
+#span-home {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: rgb(149, 236, 236);
+}
+
+.discover-button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  width: 30%;
+  margin-top: 2rem;
+  padding: 1.2rem;
+  position: relative;
+  outline: none;
+}
+.landing-button:hover {
+  color: rgb(166, 169, 173);
+  transition: 0.3s ease-in-out;
+}
+
+.discover-button .landing-button {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 1rem;
+  transform: translateY(170%);
+  font-family: "Darker Grotesque", sans-serif;
+}
+.discover-button img {
+  width: 1.5rem;
+  transition: 0.5s ease-in-out;
+}
+.landing-button img:hover {
+  transform: translateX(50%);
+  transition: 0.4s ease-in-out;
+}
+.right-slider {
+  overflow: hidden;
+  width: 30%;
+  height: 1px;
+  background-color: whitesmoke;
+  transform: translateX(-100%);
+}
+
+/******************************** VIDEO SECTION ****************************/
+main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(50%);
+}
+.section {
+	width: 100%;
+}
+
+
+/****************************** PRODUCTS SECTION  ********************/
+.products-container {
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #edece8;
+  /* position: relative; */
+  /* max-height: 100vh; */
+}
+.products-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.products-heading p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.product img {
+  width: 75%;
+  border-bottom: 1px solid rgb(158, 150, 150);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  width: 90%;
+}
+.filter-products {
+  grid-column: 1/5;
+  margin-bottom: 2%;
+}
+.filter-products select {
+  padding: 0.5rem;
+  width: 13%;
+  margin-left: 2.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  position: relative;
+}
+.product-info {
+  margin-top: 2%;
+}
+.product-info p {
+  font-size: 1.2rem;
+}
+.product-info span {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  color: rgb(61, 58, 58);
+}
+.product-overlay {
+  position: absolute;
+  height: 97%;
+  width: 78%;
+  background-color: #edece8;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.product-overlay:hover {
+  transition: 0.5s ease-in-out;
+  opacity: 50%;
+}
+.btn-container {
+  position: absolute;
+  top: 65%;
+  width: 75%;
+  height: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.btn-container .add-to-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  background-color: #2a2a2a;
+  border: none;
+  color: whitesmoke;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transform: translateY(100%);
+  border: 1px solid rgb(158, 150, 150);
+}
+.add-to-cart:hover {
+  background-color: #edece8;
+  color: black;
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgb(158, 150, 150);
+}
+
+
+
+
+/*************************************INTRO SLIDER *************************************/
+.intro {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 12;
+}
+
+.slider {
+  background-color: rgb(204, 199, 193);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  z-index: 13;
+}
+
+.intro .intro-text {
+  color: rgb(36, 34, 34);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+.hide {
+  background: whitesmoke;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: block;
+}
+
+/******************************** MEDIA QUERIES ********************************/
